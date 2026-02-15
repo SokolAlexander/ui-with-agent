@@ -31,11 +31,17 @@ npm run lint
 npm run build
 ```
 
+## PR preview deployments (GitHub Actions)
+
+This repo includes `.github/workflows/pr-preview.yml`.
+
+- Trigger: every pull request targeting `main` (`opened`, `reopened`, `synchronize`)
+- Flow: install, typecheck, lint, build, deploy
+- Preview URL pattern: `https://<owner>.github.io/<repo>/pr-<PR_NUMBER>/`
+
+To enable previews, configure GitHub Pages in the repository settings to serve from the `gh-pages` branch.
+
 ## Engine integration entry points
 
 - Engine import and setup: `src/App.tsx`
 - Starter content data: `public/settings/starter/*.json`
-
-## Game setup
-
-See 
