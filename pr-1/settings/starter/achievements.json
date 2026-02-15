@@ -1,0 +1,14 @@
+[
+  {
+    "id": "achievement-1",
+    "name": "First Steps",
+    "description": "Reach 10 output.",
+    "icon": "seedling",
+    "category": "general",
+    "condition": {
+      "type": "resourceTotal",
+      "resource": "output",
+      "amount": 10
+    }
+  }
+]
