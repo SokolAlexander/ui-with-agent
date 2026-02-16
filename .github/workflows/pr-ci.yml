@@ -1,0 +1,53 @@
+name: PR CI
+
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - reopened
+      - synchronize
+
+permissions:
+  contents: read
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Build preview bundle
+        env:
+          PREVIEW_PATH: pr-${{ github.event.pull_request.number }}
+        run: npm run build -- --base="/${{ github.event.repository.name }}/${PREVIEW_PATH}/"
+
+      - name: Save PR number metadata
+        run: echo "${{ github.event.pull_request.number }}" > pr-number.txt
+
+      - name: Upload preview artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr-preview-dist-${{ github.event.pull_request.number }}
+          path: |
+            dist
+            pr-number.txt
+          if-no-files-found: error
