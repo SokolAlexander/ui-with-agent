@@ -1,0 +1,18 @@
+[
+  {
+    "id": "prestige-upgrade-1",
+    "name": "Legacy Knowledge",
+    "description": "Small long-term production increase.",
+    "category": "meta",
+    "baseCost": 1,
+    "costMultiplier": 1.5,
+    "maxLevel": 10,
+    "effects": [
+      {
+        "type": "multiplier",
+        "target": "outputGain",
+        "value": 0.05
+      }
+    ]
+  }
+]

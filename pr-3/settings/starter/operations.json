@@ -1,0 +1,22 @@
+[
+  {
+    "id": "op-1",
+    "name": "Run First Operation",
+    "description": "A simple operation used to validate the setup.",
+    "rarity": "common",
+    "duration": 1,
+    "cooldown": 1,
+    "cost": {
+      "energy": 1,
+      "output": 0,
+      "reputation": 0,
+      "money": 0
+    },
+    "rewards": {
+      "reputation": 1,
+      "output": 1
+    },
+    "requirements": [],
+    "articlesUnlocks": []
+  }
+]

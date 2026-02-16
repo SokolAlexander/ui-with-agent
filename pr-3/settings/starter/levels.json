@@ -1,0 +1,18 @@
+[
+  {
+    "id": "level-1",
+    "name": "Getting Started",
+    "progress": {
+      "start": 0,
+      "end": 100
+    },
+    "unlockCost": {
+      "unlockedArticles": [],
+      "operationsCompleted": 0
+    },
+    "energyCostMultiplier": 1,
+    "samplesGainMultiplier": 1,
+    "description": "Base level for student training.",
+    "operations": ["op-1"]
+  }
+]
