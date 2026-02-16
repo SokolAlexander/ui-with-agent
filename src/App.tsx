@@ -27,6 +27,7 @@ const App = observer(function App() {
   return (
     <main>
       <h1>AgentWorkshop Template</h1>
+      <img className="robot-image" src="/robot.png" alt="Workshop robot" />
       <div className="card">
         <button onClick={() => engine.game.click()}>Click</button>
       </div>
