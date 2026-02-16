@@ -1,0 +1,19 @@
+[
+  {
+    "id": "upgrade-1",
+    "name": "Better Output",
+    "description": "Small output boost for onboarding.",
+    "category": "output",
+    "cost": {
+      "output": 10
+    },
+    "costMultiplier": 1.2,
+    "effect": [
+      {
+        "type": "outputGain",
+        "value": 0.1
+      }
+    ],
+    "maxLevel": 10
+  }
+]
