@@ -1,0 +1,18 @@
+[
+  {
+    "id": "worker-1",
+    "name": "Trainee",
+    "description": "Starter worker for workshop exercises.",
+    "cost": 10,
+    "production": {
+      "energy": 1,
+      "output": 1
+    },
+    "costMultiplier": 1.15,
+    "unlockConditions": [
+      {
+        "type": "default"
+      }
+    ]
+  }
+]
